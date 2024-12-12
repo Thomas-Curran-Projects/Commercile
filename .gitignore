@@ -1,0 +1,8 @@
+# Custom editor settings
+.vscode/
+
+# API keys and answer values
+js/env.js
+
+# Node modules
+node_modules/

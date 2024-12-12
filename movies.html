@@ -1,0 +1,128 @@
+<DOCTYPE! html>
+  <html>
+    <!--
+    Name: movies.html
+    Description: This is the main html page for the movie section of Commercile,
+    formats placment of navigation links, search box, video, life count,
+    hint buttons and the game results.
+    Author: Tom Curran
+    Date: 2024-11-21 
+    -->
+    <head>
+      <link rel="stylesheet" href="main.css" />
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Commercile</title>
+    </head>
+
+    <!-- getMovieName is found in the env file, hides the correct name -->
+    <body onload="getAnswerVals(getMovieName())">
+      <div class="wrapper">
+        <div class="about-logo">
+          <a class="link" href="about.html">About</a>
+        </div>
+
+        <div class="game-logo">
+          <a class="link" href="games.html">Games</a>
+        </div>
+
+        <div class="movie-logo">
+          <a class="link" href="movies.html">Movies</a>
+        </div>
+
+        <div class="logo">
+          <p>Commerci<span>le</span></p>
+        </div>
+
+        <div class="search-container">
+          <div class="search-element">
+            <h3>Search Movie:</h3>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Movie Title ..."
+              id="movie-search-box"
+              onkeyup="formatName()"
+              onclick="formatName()"
+            />
+
+            <div class="tooltip">
+              [?]
+              <span class="tool-tip-text"
+                >Use the search box to find what this commercial is
+                promoting</span
+              >
+            </div>
+
+            <div id="myPopup" class="popup">
+              <div class="popup-content">
+                <h1 style="color: rgb(255, 255, 255)">You have 1 life left!</h1>
+                <p style="color: rgb(255, 255, 255)">
+                  Are you sure you want to reveal this hint?
+                </p>
+                <br />
+                <button id="acceptPopup" class="button-64">
+                  <span class="text">Yes</span>
+                </button>
+                <br />
+                <button id="closePopup" class="button-64">
+                  <span class="text">No</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="search-list" id="search-list"></div>
+          </div>
+        </div>
+
+        <!-- getMovieVideo is found in the env file, hides the video url -->
+        <div class="Video" id="Video">
+          <iframe
+            width="1100"
+            height="500"
+            src="image_not_found.png"
+            onload="this.onload=null; this.src=getMovieVideo();"
+          >
+          </iframe>
+        </div>
+
+        <div class="end-message">
+          <p id="endMessage" style="display: none; color: white">Game Result</p>
+        </div>
+
+        <div class="Lives">
+          <span id="lifeCount" style="color: white">Lives: 5</span>
+
+          <div class="tooltip" id="lifeTip">
+            [?]
+            <span class="tool-tip-text"
+              >Remaining chances to guess or use hints</span
+            >
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="hint-container">
+            <div
+              class="hint-grid"
+              id="hint-grid"
+              style="display: block; color: white"
+            ></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="result-container">
+            <div
+              class="result-grid"
+              id="result-grid"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <script src="js/env.js"></script>
+      <script src="js/MovieController.js"></script>
+    </body></html
+></DOCTYPE!>
