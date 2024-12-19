@@ -19,13 +19,21 @@ for a proxy server used for fetching IGBD. Created to replicate the layout and f
 
 ## **Installation**
 
-To install Project Title, follow these steps:
+To install Commercile, follow these steps:
 
-1. Clone the repository: **`git clone https://github.com/username/project-title.git`**
-2. Navigate to the project directory: **`cd project-title`**
+1. Clone the repository: **[`git clone https://github.com/username/project-title.git`](https://github.com/Thomas-Curran-Projects/Commercile.git)**
+2. Navigate to the project directory: **`cd Commercile`**
 3. Install dependencies: **`npm install`**
-4. Build the project: **`npm run build`**
-5. Start the project: **`npm start`**
+4. Get an OMDB API key: **[OMDB API key request](https://www.omdbapi.com/apikey.aspx)**
+5. Get a client secret & id for IGDB: **[IGDB account creation](https://api-docs.igdb.com/#account-creation)**
+6. Follow 'Stack Setup' to create a proxy server for IGDB: **[IGDB proxy server](https://api-docs.igdb.com/#proxy)**
+7. In your proxy navigate to Reasourses -> Post -> Integration request -> click edit -> HTTP headers
+8. Add the headers Authorization mapped to stageVariables.token, Client-ID mapped to stageVariables.clientid, and Access-Control-Allow-Origin mapped to '*'
+9. Create a file called env.js inside the js folder, then add the functions shown in the image:
+10. (Optional) Install eslint and prettier extentions for linting/formatting
+11. Install an extention that can host html files locally, or install Node.js and run : **`npm install -g serve`**
+12. For an extention, follow their directions to host one of the HTML pages
+13. For Node.js, navigate to the project directory with **`cd Commercile`** then run **`serve html/file-name`**
 
 ## **Usage**
 
