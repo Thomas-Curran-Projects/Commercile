@@ -295,7 +295,7 @@ function checkAnswer(guessedName) {
       endMessage.innerHTML = "Sorry, The commercial was for:";
       endGame();
     }
-  } else if (searchName === correctName) {
+  } else if (guessedName === correctName) {
     endMessage.innerHTML = "You're right, the commercial was for:";
     endGame();
   }
