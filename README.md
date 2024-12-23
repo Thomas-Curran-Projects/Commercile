@@ -15,7 +15,7 @@ for a proxy server used for fetching IGBD. Created to replicate the layout and f
 - [Usage](#usage)
 - [Features](#features)
 - [Reasources](#reasources)
-- [Known issues & future development](#knownissues&futuredevelopment)
+- [Known issues and future development](#known-issues-and-future-development)
 - [License](#license)
 
 ## **Installation**
@@ -50,10 +50,22 @@ https://github.com/user-attachments/assets/fcd203d2-d295-4eb6-aec2-b32a5cd0a013
 
 ## **Features**
 
-- Search bar with dropdown suggestions
-- Hints and results screen from OMDB and IGDB data
-- Tooltips
-- Pop-up warnings
+1. Search bar with dropdown suggestions
+<p align="center">
+    <img src = "images/searchBar.PNG" width = 500>
+  </p>
+2. Hints and results screen from OMDB and IGDB data
+<p align="center">
+  <img src = "images/hints.PNG" width = 300> <img src = "images/resultScreen.PNG" width = 350>
+  </p>
+3. Tooltips 
+<p align="center">
+  <img src = "images/toolTip.PNG" width = 700>
+  </p>
+4. Pop-up warnings 
+<p align="center">
+  <img src = "images/popUp.PNG" width = 700>
+ </p>
 
 ## **Reasources**
 
@@ -67,7 +79,7 @@ Here are some helpful links and videos:
 - **[`Prettier setup`](https://www.youtube.com/watch?v=_fzbg6_-JuE)**
 - **[`Getting Eslint & Prettier working together`](https://www.youtube.com/watch?v=IRdPRIPd9FM)**
 
-## **Known issues & future development**
+## **Known issues and future development**
 
 Issues:
 
