@@ -13,6 +13,7 @@ for a proxy server used for fetching IGBD. Created to replicate the layout and f
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Features](#features)
 - [Reasources](#reasources)
 - [Known issues & future development](#knownissues&futuredevelopment)
 - [License](#license)
@@ -29,7 +30,7 @@ To install Commercile, follow these steps:
 6. Follow 'Stack Setup' to create a proxy server for IGDB: **[IGDB proxy server](https://api-docs.igdb.com/#proxy)**
 7. In your proxy navigate to Reasourses -> Post -> Integration request -> click edit -> HTTP headers
 8. Add the headers Authorization mapped to stageVariables.token, Client-ID mapped to stageVariables.clientid, and Access-Control-Allow-Origin mapped to '*'
-9. Create a file called env.js inside the js folder, then add the functions shown in the image:
+9. Create a file called env.js inside the js folder, then add the functions shown in the image: <img src = "images/envSetup.PNG" width = 700>
 10. (Optional) Install eslint and prettier extentions for linting/formatting
 11. Install an extention that can host html files locally, or install Node.js and run : **`npm install -g serve`**
 12. For an extention, follow their directions to host one of the HTML pages
@@ -37,42 +38,54 @@ To install Commercile, follow these steps:
 
 ## **Usage**
 
-To use Project Title, follow these steps, how to get it running on their machine with images:
+To use Commercile, follow these steps:
 
-1. Open the project in your favorite code editor.
+1. Open the project a code editor.
 2. Modify the source code to fit your needs.
-3. Build the project: **`npm run build`**
-4. Start the project: **`npm start`**
-5. Use the project as desired.
+3. Use an extention or Node.js to host an HTML file.
+
+Demo Video:
+
+https://github.com/user-attachments/assets/fcd203d2-d295-4eb6-aec2-b32a5cd0a013
+
+## **Features**
+
+- Search bar with dropdown suggestions
+- Hints and results screen from OMDB and IGDB data
+- Tooltips
+- Pop-up warnings
 
 ## **Reasources**
 
-Here are some helpful guides for setting up the project:
+Here are some helpful links and videos:
 
-1. Fork the repository.
-2. Create a new branch for your changes.
-3. Make your changes.
-4. Write tests to cover your changes.
-5. Run the tests to ensure they pass.
-6. Commit your changes.
-7. Push your changes to your forked repository.
-8. Submit a pull request.
+- **[`OMDB homepage`](https://www.omdbapi.com/)**
+- **[`IGDB homepage`](https://www.igdb.com/)**
+- **[`Eslint Documentation`](https://eslint.org/docs/latest/)**
+- **[`Prettier Documentation`](https://prettier.io/docs/en/)**
+- **[`Eslint setup`](https://www.youtube.com/watch?v=eieTlMwCwWU&t=463s)**
+- **[`Prettier setup`](https://www.youtube.com/watch?v=_fzbg6_-JuE)**
+- **[`Getting Eslint & Prettier working together`](https://www.youtube.com/watch?v=IRdPRIPd9FM)**
 
 ## **Known issues & future development**
 
-Project Title is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
+Issues:
+
+1. Poster images for the games page are lower resolution then the poster image on the movie page.
+2. "Image not found" picture is shown beofre videos load.
+
+Future development:
+
+Development on Commercile is currently paused while I work on other projects, but in the future I plan expanding the project to be web hosted instead of locally hosted and be automatically updated every day with different commercials. 
 
 ## **License**
 
-Project Title is released under the MIT License. See the **[LICENSE](https://www.blackbox.ai/share/LICENSE)** file for details.
+Commercile is released under the MIT License. See the **[MIT licensing page](https://tlo.mit.edu/understand-ip/exploring-mit-open-source-license-comprehensive-guide)** for details.
 
 ## **Authors and Acknowledgment**
 
-Project Title was created by **[Your Name](https://github.com/username)**.
+Commercile was created by **[Thomas Curran](https://github.com/ThomasCurran2)**.
 
 ## **Changelog**
 
 - **0.1.0:** Initial release
-- **0.1.1:** Fixed a bug in the build process
-- **0.2.0:** Added a new feature
-- **0.2.1:** Fixed a bug in the new feature
