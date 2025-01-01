@@ -84,7 +84,8 @@ Here are some helpful links and videos:
 Issues:
 
 1. Poster images for the games page are lower resolution then the poster image on the movie page.
-2. "Image not found" picture is shown beofre videos load.
+2. "Image not found" picture is shown before videos load.
+3. Video name reveals the movie/game name.
 
 Future development:
 
