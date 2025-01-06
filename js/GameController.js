@@ -47,7 +47,11 @@ async function getAnswerVals(gameName) {
 
   for (let idx = 0; idx < data.length; idx++) {
     if (data[idx].name === correctName) {
-      correctCover = data[idx].cover.image_id;
+      if (data[idx].cover.image_id !== null) {
+        correctCover = data[idx].cover.image_id;
+      } else {
+        correctDate = "../images/image_not_found.png";
+      }
 
       if (data[idx].release_dates[0].y !== null) {
         correctDate = data[idx].release_dates[0].y;
@@ -253,7 +257,7 @@ function displayGameList(games) {
         "https://images.igdb.com/igdb/image/upload/t_thumb/" +
         games[idx].cover.image_id +
         ".jpg";
-    else gamePoster = "image_not_found.png";
+    else gamePoster = "../images/image_not_found.png";
 
     if (games[idx].release_dates !== null) year = games[idx].release_dates[0].y;
     else year = "N/A";
@@ -330,7 +334,7 @@ function endGame() {
 function displayGameDetails() {
   resultGrid.innerHTML = `
     <div class = "content-poster">
-        <img src = "${correctCover !== null ? "https://images.igdb.com/igdb/image/upload/t_thumb/" + correctCover + ".jpg" : "image_not_found.png"}" alt = "game poster">
+        <img src = "${"https://images.igdb.com/igdb/image/upload/t_thumb/" + correctCover + ".jpg"}" alt = "game poster">
     </div>
     <div class = "content-info">
         <h3 class = "content-title">${correctName}</h3>

@@ -46,6 +46,12 @@ async function getAnswerVals(movieName) {
   if (movieDetails.Title === correctName) {
     correctCover = movieDetails.Poster;
 
+    if (movieDetails.Poster !== null) {
+      correctCover = movieDetails.Poster;
+    } else {
+      correctCover = "../images/image_not_found.png";
+    }
+
     if (movieDetails.Year !== null) {
       correctYear = movieDetails.Year;
     } else {
@@ -247,7 +253,7 @@ function displayMovieList(movies) {
     movieListItem.classList.add("search-list-item");
 
     if (movies[idx].Poster !== "N/A") moviePoster = movies[idx].Poster;
-    else moviePoster = "image_not_found.png";
+    else moviePoster = "../images/image_not_found.png";
 
     movieListItem.innerHTML = `
         <div class = "search-item-thumbnail">
@@ -321,7 +327,7 @@ function endGame() {
 function displayMovieDetails() {
   resultGrid.innerHTML = `
     <div class = "content-poster">
-        <img src = "${correctCover !== "N/A" ? correctCover : "image_not_found.png"}" alt = "movie poster">
+        <img src = "${correctCover}" alt = "movie poster">
     </div>
     <div class = "content-info">
         <h3 class = "content-title">${correctName}</h3>
